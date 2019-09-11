@@ -44,7 +44,7 @@ void MyProcess::myReadyReadStandardOutput() {
     // Note we need to add \n (it's like pressing enter key)
 
 
-    this->write(QString("myname" + QString("\n")).toLatin1());
+   // this->write(QString("myname" + QString("\n")).toLatin1());
    // this->write(QString("myname").toLatin1());
     // Next line no required
     // qDebug() << this->readAll();
@@ -58,7 +58,7 @@ int main(int argc, char *argv[])
 
     MyProcess *myProcess = new MyProcess();
 
-    QString program = "./myscript.sh";
+    QString program = "./myscript3.sh";
 
     myProcess->start("/bin/sh", QStringList() << program);
 
