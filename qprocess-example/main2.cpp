@@ -1,6 +1,16 @@
 #include <QCoreApplication>
 #include <QProcess>
 #include <QDebug>
+#include <qobject.h>
+//https://stackoverflow.com/questions/41848939/reading-and-writing-to-qprocess-in-qt-console-application
+
+//QString cmd = "cat file | grep string";
+//QProcess *process = new QProcess;
+//process->start(cmd);
+//process->waitForBytesWritten();
+//process->waitForFinished();
+//qDebug() << process->readAll();
+
 
 class MyProcess : public QProcess
 {
@@ -24,14 +34,23 @@ MyProcess::MyProcess(QObject *parent)
 }
 
 void MyProcess::myReadyRead() {
+    QTextStream s(stdin);
+    QString value = s.readLine();
     qDebug() << Q_FUNC_INFO;
 }
 
 void MyProcess::myReadyReadStandardOutput() {
     qDebug() << Q_FUNC_INFO;
     // Note we need to add \n (it's like pressing enter key)
-    this->write(QString("myname" + QString("\n")).toLatin1());
-   // this->write(QString("" + QString("\n") ).toLatin1());
+
+//this returns true
+ //   this->write(QString("myname" + QString("\n")).toLatin1());
+
+    //this returns false
+   this->write(QString("" + QString("\n") ).toLatin1());
+
+
+   // this->write(QString("myname").toLatin1());
     // Next line no required
     // qDebug() << this->readAll();
     qDebug() << this->readAllStandardOutput();
