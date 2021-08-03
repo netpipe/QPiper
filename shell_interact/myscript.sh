@@ -1,5 +1,5 @@
 #!/bin/sh
-python example.py
+python test.py
 read n
 echo $n > "log_test.txt"
 if [ ! -z "$n" ];

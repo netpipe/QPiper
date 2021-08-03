@@ -1,3 +1,2 @@
-person = input('Enter your name: ')
-print('Hi', person)
-
+txt = raw_input("Type something to test this out: ")
+print "Is this what you just said?", txt
