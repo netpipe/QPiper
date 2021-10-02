@@ -12,12 +12,15 @@ Qonsole::Qonsole(QWidget *parent) :
     ui->edt_log->installEventFilter(this);
     ui->edt_log->setLineWrapMode(QTextEdit::WidgetWidth);
 
+    ui->edt_input->setVisible(false);
+
     m_process = new QProcess(this);
     m_process->setReadChannelMode(QProcess::MergedChannels);
     connect(m_process, SIGNAL(readyReadStandardOutput()), this, SLOT(showOutput()));
 
-    QString program = "./myscript.sh";
+    QString program = "myscript.sh";
     m_process->start("/bin/sh", QStringList() << program, QIODevice::ReadWrite);
+    //m_process->start("cmd", QStringList() << program, QIODevice::ReadWrite);
 }
 
 Qonsole::~Qonsole()
@@ -50,15 +53,16 @@ void Qonsole::showOutput()
 
 bool Qonsole::eventFilter(QObject *watched, QEvent *event)
 {
-    if( event->type() == QEvent::KeyPress )
+    if(event->type() == QEvent::KeyPress)
     {
         QKeyEvent* key_event = static_cast<QKeyEvent*>(event);
         int key = key_event->key();
         QString key_str = key_event->text();
 
         ui->edt_input->insertPlainText(key_str);
+        ui->edt_log->insertPlainText(key_str);
 
-        if ( (key == Qt::Key_Return) || (key == Qt::Key_Enter) )
+        if ((key == Qt::Key_Return) || (key == Qt::Key_Enter) )
         {
             execute();
             return true;
@@ -74,11 +78,3 @@ bool Qonsole::eventFilter(QObject *watched, QEvent *event)
 }
 
 
-
-void Qonsole::on_pushButton_clicked()
-{
-  //  ui->edt_input->insertPlainText("key_str");
-
-    execute();
- //   showOutput();
-}

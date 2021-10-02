@@ -24,9 +24,6 @@ public slots:
 protected:
     void updateCursor();
 
-private slots:
-    void on_pushButton_clicked();
-
 private:
     Ui::Qonsole *ui;
 
