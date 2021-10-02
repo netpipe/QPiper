@@ -37,7 +37,11 @@ MOVE          = mv -f
 TAR           = tar -cf
 COMPRESS      = gzip -9f
 DISTNAME      = Pipe_Example1.0.0
+<<<<<<< HEAD
 DISTDIR = /home/netpipe/qtprojects/QPiper/.tmp/Pipe_Example1.0.0
+=======
+DISTDIR = /home/netpipe/Desktop/QPiper/.tmp/Pipe_Example1.0.0
+>>>>>>> f5a9f6ef2b5c90eb6449e9004ac1c573b4bcab99
 LINK          = g++
 LFLAGS        = 
 LIBS          = $(SUBLIBS) /usr/lib64/libQt5Widgets.so /usr/lib64/libQt5Gui.so /usr/lib64/libQt5Core.so /usr/lib64/libGL.so -lpthread   
@@ -301,7 +305,10 @@ DIST          = /usr/lib64/qt5/mkspecs/features/spec_pre.prf \
 		/usr/lib64/qt5/mkspecs/features/qt_config.prf \
 		/usr/lib64/qt5/mkspecs/linux-g++/qmake.conf \
 		/usr/lib64/qt5/mkspecs/features/spec_post.prf \
+<<<<<<< HEAD
 		.qmake.stash \
+=======
+>>>>>>> f5a9f6ef2b5c90eb6449e9004ac1c573b4bcab99
 		/usr/lib64/qt5/mkspecs/features/exclusive_builds.prf \
 		/usr/lib64/qt5/mkspecs/features/toolchain.prf \
 		/usr/lib64/qt5/mkspecs/features/default_pre.prf \
@@ -578,7 +585,10 @@ Makefile: Pipe_Example.pro /usr/lib64/qt5/mkspecs/linux-g++/qmake.conf /usr/lib6
 		/usr/lib64/qt5/mkspecs/features/qt_config.prf \
 		/usr/lib64/qt5/mkspecs/linux-g++/qmake.conf \
 		/usr/lib64/qt5/mkspecs/features/spec_post.prf \
+<<<<<<< HEAD
 		.qmake.stash \
+=======
+>>>>>>> f5a9f6ef2b5c90eb6449e9004ac1c573b4bcab99
 		/usr/lib64/qt5/mkspecs/features/exclusive_builds.prf \
 		/usr/lib64/qt5/mkspecs/features/toolchain.prf \
 		/usr/lib64/qt5/mkspecs/features/default_pre.prf \
@@ -844,7 +854,10 @@ Makefile: Pipe_Example.pro /usr/lib64/qt5/mkspecs/linux-g++/qmake.conf /usr/lib6
 /usr/lib64/qt5/mkspecs/features/qt_config.prf:
 /usr/lib64/qt5/mkspecs/linux-g++/qmake.conf:
 /usr/lib64/qt5/mkspecs/features/spec_post.prf:
+<<<<<<< HEAD
 .qmake.stash:
+=======
+>>>>>>> f5a9f6ef2b5c90eb6449e9004ac1c573b4bcab99
 /usr/lib64/qt5/mkspecs/features/exclusive_builds.prf:
 /usr/lib64/qt5/mkspecs/features/toolchain.prf:
 /usr/lib64/qt5/mkspecs/features/default_pre.prf:
@@ -920,7 +933,11 @@ compiler_moc_header_clean:
 moc_qonsole.cpp: qonsole.h \
 		moc_predefs.h \
 		/usr/lib64/qt5/bin/moc
+<<<<<<< HEAD
 	/usr/lib64/qt5/bin/moc $(DEFINES) --include /home/netpipe/qtprojects/QPiper/moc_predefs.h -I/usr/lib64/qt5/mkspecs/linux-g++ -I/home/netpipe/qtprojects/QPiper -I/usr/include/qt5 -I/usr/include/qt5/QtWidgets -I/usr/include/qt5/QtGui -I/usr/include/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/c++/7/x86_64-suse-linux -I/usr/include/c++/7/backward -I/usr/lib64/gcc/x86_64-suse-linux/7/include -I/usr/local/include -I/usr/lib64/gcc/x86_64-suse-linux/7/include-fixed -I/usr/x86_64-suse-linux/include -I/usr/include qonsole.h -o moc_qonsole.cpp
+=======
+	/usr/lib64/qt5/bin/moc $(DEFINES) --include /home/netpipe/Desktop/QPiper/moc_predefs.h -I/usr/lib64/qt5/mkspecs/linux-g++ -I/home/netpipe/Desktop/QPiper -I/usr/include/qt5 -I/usr/include/qt5/QtWidgets -I/usr/include/qt5/QtGui -I/usr/include/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/c++/7/x86_64-suse-linux -I/usr/include/c++/7/backward -I/usr/lib64/gcc/x86_64-suse-linux/7/include -I/usr/local/include -I/usr/lib64/gcc/x86_64-suse-linux/7/include-fixed -I/usr/x86_64-suse-linux/include -I/usr/include qonsole.h -o moc_qonsole.cpp
+>>>>>>> f5a9f6ef2b5c90eb6449e9004ac1c573b4bcab99
 
 compiler_moc_objc_header_make_all:
 compiler_moc_objc_header_clean:
