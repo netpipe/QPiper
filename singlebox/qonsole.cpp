@@ -20,6 +20,8 @@ Qonsole::Qonsole(QWidget *parent) :
 
     QString program = "myscript.sh";
     m_process->start("/bin/sh", QStringList() << program, QIODevice::ReadWrite);
+   // m_process->start("python", QIODevice::ReadWrite);
+
     //m_process->start("cmd", QStringList() << program, QIODevice::ReadWrite);
 }
 
